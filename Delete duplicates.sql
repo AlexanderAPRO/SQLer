@@ -4,7 +4,7 @@ FROM
 (SELECT *
 , DupRank = ROW_NUMBER() OVER (
               PARTITION BY col
-              ORDER BY (SELECT NULL))
+              ORDER BY (SELECT NULL)
             )
 FROM table
  AS T
